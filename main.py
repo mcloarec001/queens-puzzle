@@ -5,7 +5,7 @@ import copy
 import matplotlib.pyplot as plt
 
 GRID_SIZE = 20
-NB_MAX_TRIES = 50000
+NB_MAX_TRIES = 20000
 NB_HPT = 4
 
 
@@ -50,9 +50,8 @@ def find_many_solutions(
 
 
 def hyper_parameter_tuning(nb_hpt: int):
-    proba_queens = np.linspace(0.1, 0.7, nb_hpt)
-    proba_movements = np.linspace(0.0, 0.4, nb_hpt)
-
+    proba_queens = np.linspace(0.24, 0.5, nb_hpt)
+    proba_movements = np.linspace(0.0, 0.2, nb_hpt)
     nb_solutions = [
         [
             find_many_solutions(proba_queens[i], proba_movements[j], drawing=False)
