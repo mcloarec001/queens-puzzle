@@ -1,7 +1,7 @@
 class Queen:
+    _nb_conflicts = 0
     line = 0
     column = 0
-    nb_conflicts = 0
 
     def __init__(self, new_line: int, new_column: int):
         """Initiate a Queen object
@@ -33,6 +33,7 @@ class Queen:
 
     def draw(self):
         """Print the queen's position and number of conflicts"""
+
         print(
             f"Position : [{self.line}, {self.column}]  ; Nombre de conflits : {self.nb_conflicts} "
         )
